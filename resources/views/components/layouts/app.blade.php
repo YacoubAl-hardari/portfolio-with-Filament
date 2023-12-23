@@ -144,7 +144,7 @@
 </style>
             
     </head>
-    <body class="white-vertion black-bg   @if (app()->getLocale() === 'en')  mh-ltr @else  mh-rtl @endif">
+    <body class="dark-vertion black-bg   @if (app()->getLocale() === 'en')  mh-ltr @else  mh-rtl @endif">
         
         <!-- Start Loader -->
         {{-- <div class="section-loader">
