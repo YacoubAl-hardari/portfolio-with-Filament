@@ -377,8 +377,8 @@
                                 <h2><a href="{{ $Post->url  }}">{{ $Post->title }}</a></h2>
                                 <div class="mh-blog-post-info">
                                     <ul>
-                                        <li><a href="#">{{ $Post->date  }}</a><strong>بعد على</strong></li>
-                                        <li><a href="#">{{ $Post->users->name  }}</a><strong>بواسطة</strong></li>
+                                        <li><a href="#">{{ $Post->date  }}</a><strong></strong></li>
+                                        <li><a href="#">{{ $Post->users->name  }}</a><strong>{{ trans('ar.by') }}</strong></li>
                                     </ul>
                                 </div>
                                 <p>

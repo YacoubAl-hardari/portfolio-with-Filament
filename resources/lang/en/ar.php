@@ -25,6 +25,8 @@ return [
     'readMore'=>'read More',
     'sendMessage'=>'send Message',
     'langs'=>'Choose languages',
+    'by'=>'by',
+
 
 ];
 
