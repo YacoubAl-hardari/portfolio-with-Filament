@@ -16,6 +16,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.2",
+        "mohamedsabil83/filament-forms-tinyeditor": "^2.2",
         "outhebox/blade-flags": "^1.2"
     },
     "require-dev": {
