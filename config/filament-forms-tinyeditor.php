@@ -19,9 +19,11 @@ return [
         ],
 
         'simple' => [
-            'plugins' => 'autoresize directionality emoticons link wordcount',
+            'plugins' => 'directionality emoticons link wordcount',
             'toolbar' => 'removeformat | bold italic | rtl ltr | link emoticons',
-            'upload_directory' => null,
+            'custom_configs' => [
+                'image_advtab' => true
+            ]
         ],
 
         'template' => [

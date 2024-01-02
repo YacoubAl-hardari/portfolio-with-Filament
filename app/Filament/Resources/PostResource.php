@@ -16,6 +16,7 @@ use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Section;
 use Filament\Resources\Concerns\Translatable;
 use App\Filament\Resources\PostResource\Pages;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class PostResource extends Resource
 {
@@ -75,24 +76,8 @@ class PostResource extends Resource
                         Forms\Components\TextInput::make('samll_description')
                         ->columnSpanFull()
                             ->required(),
-                        Forms\Components\RichEditor::make('long_description')
+                            TinyEditor::make('long_description')
                         ->columnSpanFull()
-                        ->toolbarButtons([
-                            'attachFiles',
-                            'blockquote',
-                            'bold',
-                            'bulletList',
-                            'codeBlock',
-                            'h2',
-                            'h3',
-                            'italic',
-                            'link',
-                            'orderedList',
-                            'redo',
-                            'strike',
-                            'underline',
-                            'undo',
-                        ])
                             ->required(),
                         
                     ]
