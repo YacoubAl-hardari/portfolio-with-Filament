@@ -3,6 +3,7 @@
 **The Project: Clone the project repository from the source control system to your local machine.**
 ```
 git clone https://github.com/YacoubAl-hardari/portfolio-with-Filament.git
+
 ```
 
 **Install Dependencies:** Run the command in the project directory to install all the required dependencies for the project.
@@ -20,21 +21,25 @@ php artisan key:generate
 **Migrate Database Tables:** To create the necessary tables in the database, run the command. This will set up the required database structure for the project.
 ```
 php artisan migrate
+
 ```
 
 **Generate User Account:** To create a user account for the application, use the command  followed by your **name, Gmail, and password**. This command will generate a user account with the provided credentials.
 ```
 php artisan make:filament-user
+
 ```
 
 ```
 php artisan db:seed
+
 ```
 
 
 **Start the Server:** Finally, run the command "" to start the PHP development server  **http://127.0.0.1:8000/admin**. 
 ```
 php artisan serve
+
 ```
 
 ## Contributing
