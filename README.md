@@ -18,6 +18,9 @@ git clone https://github.com/YacoubAl-hardari/portfolio-with-Filament.git
 php artisan key:generate
 ```
 
+**Generate New Database in your server:**
+
+
 **Migrate Database Tables:** To create the necessary tables in the database, run the command. This will set up the required database structure for the project.
 ```
 php artisan migrate
@@ -34,6 +37,13 @@ php artisan make:filament-user
 php artisan db:seed
 
 ```
+
+**Generate Storage link:** In order to display the image, run the following command in the terminal: 
+```
+php artisan storage:link
+
+```
+After generating the storage link, copy the URL and paste it into the **APP_URL=http://127.0.0.1:8000** .env file.
 
 
 **Start the Server:** Finally, run the command "" to start the PHP development server  **http://127.0.0.1:8000/admin**. 
