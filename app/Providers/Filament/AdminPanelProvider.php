@@ -25,7 +25,7 @@ class AdminPanelProvider extends PanelProvider
     
     public function panel(Panel $panel): Panel
     {
-
+       // The 'settings' table exists in the database
         if (Schema::hasTable('settings'))
         $SEO = \App\Models\Settings::latest()->first();
         
