@@ -39,8 +39,8 @@ class PostCategorieResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\IconColumn::make('status')
-                    ->boolean(),
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\ToggleColumn::make('status'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

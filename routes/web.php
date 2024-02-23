@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Front\PostDetails\ShowPostDetails;
 use App\Livewire\Home\ShowHomePage;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', ShowHomePage::class)->name('home');
+
+Route::get('/blog/{slug}', ShowPostDetails::class)->name('ShowPostDetails');
+
+
+
+
 Route::get('/lang/{lang}',function($lang){
 
        

@@ -183,25 +183,25 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto ml-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#mh-home">{{ trans('ar.Home') }}</a>
+                                    <a class="nav-link" href="{{ route('home') }}#mh-home">{{ trans('ar.Home') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#mh-about">{{ trans('ar.about_me') }}</a>
+                                    <a class="nav-link" href="{{ route('home') }}#mh-about">{{ trans('ar.about_me') }}</a>
                                 </li>
                                 <li class="nav-item"> 
-                                   <a class="nav-link" href="#mh-skills">{{ trans('ar.skills') }}</a>
+                                   <a class="nav-link" href="{{ route('home') }}#mh-skills">{{ trans('ar.skills') }}</a>
                                 </li>                                
                                 <li class="nav-item">
-                                   <a class="nav-link" href="#mh-experience">{{ trans('ar.experience') }}</a>
+                                   <a class="nav-link" href="{{ route('home') }}#mh-experience">{{ trans('ar.experience') }}</a>
                                 </li>                                
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#mh-portfolio">{{ trans('ar.portfolio') }}</a>
+                                    <a class="nav-link" href="{{ route('home') }}#mh-portfolio">{{ trans('ar.portfolio') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#mh-blog">{{ trans('ar.blog') }}</a>
+                                    <a class="nav-link" href="{{ route('home') }}#mh-blog">{{ trans('ar.blog') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                   <a class="nav-link" href="#mh-contact">{{ trans('ar.contact_me') }}</a>
+                                   <a class="nav-link" href="{{ route('home') }}#mh-contact">{{ trans('ar.contact_me') }}</a>
                                 </li>
                             </ul>
                         </div>
@@ -246,97 +246,7 @@
             </div>
         </div>
              
-        <footer class="mh-footer" id="mh-contact">
-            <div class="map-image image-bg">
-                <div class="container">
-                    <div class="row section-separator">
-                        <div class="col-sm-12 section-title">
-                            <h3>{{ trans('ar.contact_me') }}</h3>
-                        </div>
-                        <div class="col-sm-12 mh-footer-address">
-                            <div class="row">
-                               @php $ContactUs = \App\Models\ContactUs::latest()->get() ; @endphp
-                               @foreach($ContactUs as $ContactU)
-                               <div class="col-sm-12 col-md-4">
-                                   <div class="mh-address-footer-item dark-bg shadow-1">
-                                       <div class="each-icon">
-                                          <img src="{{ asset('storage/'.$ContactU->image) }}" alt="{{ $ContactU->name }}" width="50">
-                                       </div>
-                                       <div class="each-info">
-                                           <h4>{{ $ContactU->name }}</h4>
-                                           @if($ContactU->data)
-                                           @foreach($ContactU->data as $value)
-                                           <b>
-                                             {{ $value['name'] }} <br>
-                                           </b>
-                                            
-                                           @endforeach
-                                            
-                                           @endif
-                                       </div>
-                                   </div>
-                               </div>
-                                
-                               @endforeach
-                             
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <form id="contactForm" class="single-form quate-form wow fadeInUp" data-toggle="validator">
-                                <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-                                        <input name="name" class="contact-name form-control" id="name" type="text" placeholder="{{ trans('ar.name') }}" required>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <input name="name" class="contact-email form-control" id="L_name" type="text" placeholder="{{ trans('ar.lastName') }}" required>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <input name="name" class="contact-subject form-control" id="email" type="email" placeholder="{{ trans('ar.email') }}" required>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <textarea class="contact-message" id="message" rows="6" placeholder="{{ trans('ar.Message') }}" required></textarea>
-                                    </div>
-                                    <!-- Subject Button -->
-                                    <div class="btn-form col-sm-12">
-                                        <button type="submit" class="btn btn-fill btn-block" id="form-submit">{{ trans('ar.sendMessage') }}</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <div class="mh-map">
-                                <div id="mh-map" class="shadow-1"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 mh-copyright">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="text-right text-xs-center">
-                                        <p>جميع الحقوق محفوظة Yacoub Al-haidari @ 2023</p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    
-                                    @php $SoicalMedais = \App\Models\SoicalMedai::latest()->get() ; @endphp
-                                    <ul class="social-icon">
-                                        @foreach($SoicalMedais as $social_link)
-                                        @if ($social_link->social_links)
-                                        @foreach($social_link->social_links as $social_link)
-                                        <li><a class="mx-1" href="{{ $social_link['link'] }}"><img src="{{ asset('storage/'.$social_link['icon']) }}" alt="logo social medai"></a></li>
-                                            
-                                        @endforeach
-                                        @endif
-                                        @endforeach
-                                            
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>   
+      
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
