@@ -52,6 +52,22 @@ php artisan serve
 
 ```
 
+
+<h3>
+For Sending Emails 
+</h3>
+
+<p> add your email setting in **env file ** </p>
+
+<p>MAIL_MAILER=smtp</p>
+<p>MAIL_HOST=mailpit</p>
+<p>MAIL_PORT=1025</p>
+<p>MAIL_USERNAME=null</p>
+<p>MAIL_PASSWORD=null</p>
+<p>MAIL_ENCRYPTION=null</p>
+<p>MAIL_FROM_ADDRESS="hello@example.com"</p>
+<p>MAIL_FROM_NAME="${APP_NAME}"</p>
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
