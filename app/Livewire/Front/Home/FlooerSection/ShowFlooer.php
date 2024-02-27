@@ -37,7 +37,7 @@ class ShowFlooer extends Component
         ]);
 
         // Add logic to send email...
-        Mail::to('your@email.com')->send(new ContactFormSubmitted($this->name, $this->last_name, $this->email, $this->message));
+        Mail::to(env('MAIL_FROM_ADDRESS'))->send(new ContactFormSubmitted($this->name, $this->last_name, $this->email, $this->message));
 
         // Optionally, you can clear the form fields after submission
         $this->reset(['name', 'last_name', 'email', 'message']);
